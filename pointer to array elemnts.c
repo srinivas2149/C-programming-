@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+
+int* getElement(int arr[], int index) {
+    return &arr[index];   // return address of element
+}
+
+int main() {
+    int arr[5] = {4, 8, 12, 16, 20};
+    int *p = getElement(arr, 2);   // correct function call
+
+    printf("Element at index 2 = %d\n", *p);
+
+    return 0;
+}
